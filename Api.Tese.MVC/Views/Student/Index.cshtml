@@ -1,0 +1,93 @@
+﻿@using Api.Tese.Entities
+
+@{
+    List<Student> list = ViewBag.listStudents;
+
+    string message = ViewBag.TestMessage;
+}
+
+
+
+<h1>Estudiantes</h1>
+
+
+<p>@message:</p>
+
+<div class="">
+
+    <div class="col-md-6">
+
+        
+        
+
+    </div>
+
+
+    <div class="col-md-12">
+
+        <table  style="font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;">
+            <thead>
+                <tr>
+                    <th>
+                        Id
+                    </th>
+                    <th>
+                        Nombre
+                    </th>
+                    <th>
+                        Apellido
+                    </th>
+                    <th>
+                        Edad
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+
+
+
+                    @if(list != null)
+                    {
+                        @foreach(var student in list)
+                        {
+                            
+                           <tr>
+                                <td>
+                                @student.Id
+                            </td>
+                             <td>
+                                @student.Name
+
+                            </td>
+                            <td>
+                                @student.LastName
+                        
+                            </td>
+                             <td>
+                                 @student.Age
+                        
+                            </td>
+                            <td>
+                                Ver más detalles...
+                            </td>
+                           </tr>
+                             
+                        }
+
+                    }
+                    else
+                    {
+                        <td>No existe registro..............</td>
+                    }
+
+               
+            </tbody>
+        </table>
+
+    </div>
+
+</div>
+
