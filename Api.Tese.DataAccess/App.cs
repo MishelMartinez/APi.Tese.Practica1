@@ -1,4 +1,5 @@
 ﻿using Api.Tese.DataAccess.DataAccess.Mock;
+using Api.Tese.DataAccess.DataAccess.SqlServer;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,7 +21,7 @@ namespace Api.Tese.DataAccess
             {
                 if(App.dataAccess == null)
                 {
-                    App.dataAccess = new MockDataAccess();
+                    App.dataAccess = new SqlServerDataAccess("Server=baseapi.database.windows.net; DataBase=School; User ID=api; Password=Passw0rd123.");
                 }
 
 
