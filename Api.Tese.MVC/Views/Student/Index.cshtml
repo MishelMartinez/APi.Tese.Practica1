@@ -4,7 +4,18 @@
     List<Student> list = ViewBag.listStudents;
 
     string message = ViewBag.TestMessage;
+
+   
 }
+
+
+
+<form class="" id="frmStudents" style="display:grid;grid-template-columns:1fr 2fr 1fr" asp-controller="Student" asp-action="Index" >
+
+    <label> Ingrese nombre de estudiante:</label>
+    <input id="name" type="text" class="form form-control" name="nameStudent" />
+    <input type="submit" value="Buscar" class="btn btn-info"/>
+</form>
 
 
 
@@ -91,3 +102,10 @@
 
 </div>
 
+
+<script>
+
+   
+
+
+</script>

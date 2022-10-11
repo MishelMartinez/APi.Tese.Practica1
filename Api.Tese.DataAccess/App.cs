@@ -2,6 +2,7 @@
 using Api.Tese.DataAccess.DataAccess.SqlServer;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,7 +22,7 @@ namespace Api.Tese.DataAccess
             {
                 if(App.dataAccess == null)
                 {
-                    App.dataAccess = new SqlServerDataAccess("Server=baseapi.database.windows.net; DataBase=School; User ID=api; Password=Passw0rd123.");
+                    App.dataAccess = new SqlServerDataAccess(System.Configuration.ConfigurationManager.ConnectionStrings["DataBase"].ConnectionString);
                 }
 
 
