@@ -22,5 +22,10 @@ namespace Api.Tese.BusinessLogic.Students
             return await App.DataAccess.GetStudent(id);
         }
 
+        public async Task<int> DeleteStudent(int id)
+        {
+            return await App.DataAccess.DeleteStudent(id);
+        }
+
     }
 }

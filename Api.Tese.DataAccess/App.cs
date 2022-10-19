@@ -22,7 +22,8 @@ namespace Api.Tese.DataAccess
             {
                 if(App.dataAccess == null)
                 {
-                    App.dataAccess = new SqlServerDataAccess(System.Configuration.ConfigurationManager.ConnectionStrings["DataBase"].ConnectionString);
+                    App.dataAccess = new SqlServerDataAccess(System.Configuration.ConfigurationManager.ConnectionStrings["DataBaseLocal"].ConnectionString);
+                   // App.dataAccess = new MockDataAccess();
                 }
 
 

@@ -8,6 +8,11 @@ namespace Api.Tese.DataAccess.DataAccess.Mock
 {
     public class MockDataAccess : IDataAccess
     {
+        public Task<int> DeleteStudent(int id)
+        {
+            throw new NotImplementedException();
+        }
+
         public async Task<Student> GetStudent(int id)
         {
             List<Subject> list = new List<Subject>()

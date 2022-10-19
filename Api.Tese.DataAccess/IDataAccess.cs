@@ -16,6 +16,7 @@ namespace Api.Tese.DataAccess
         Task<Student> GetStudent(int id);
 
 
+        Task<int> DeleteStudent(int id);
         Task<int> Test();
 
        

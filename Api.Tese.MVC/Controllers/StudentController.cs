@@ -39,6 +39,16 @@ namespace Api.Tese.MVC.Controllers
 
 
 
+
+        [HttpDelete]
+
+        public IActionResult Eliminar(int Id)
+        {
+            return RedirectToAction("Index");
+
+        }
+
+
         public async Task<List<Student>> GetStudentsByName(string Name)
         {
             List<Student> list = await studentBL.GetStudents();

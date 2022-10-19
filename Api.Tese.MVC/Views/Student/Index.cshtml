@@ -82,7 +82,7 @@
                         
                             </td>
                             <td>
-                                Ver más detalles...
+                               <i onclick="EliminarEstudiante(@student.Id)"> Borrar</i>
                             </td>
                            </tr>
                              
@@ -103,8 +103,17 @@
 </div>
 
 
+<form asp-controller="Student" asp-action="Eliminar" id="frmDelete">
+
+    <input type="text" id="txtIdEstudiante" name="Id"/>
+</form>
+
 <script>
 
+    function EliminarEstudiante(idEstudiante){
+        alert(idEstudiante);
+       
+    }
    
 
 

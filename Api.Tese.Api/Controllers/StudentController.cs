@@ -49,6 +49,18 @@ namespace Api.Tese.Api.Controllers
 
 
 
+        [HttpDelete()]
+        [Route("DeleteStudent")]
+
+        public async Task<int> DeleteStudent(int Id)
+        {
+            return await studentBL.DeleteStudent(Id);
+        }
+
+       
+
+
+
 
     }
 }
