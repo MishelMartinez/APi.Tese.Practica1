@@ -42,7 +42,7 @@ namespace Api.Tese.MVC.Controllers
 
         [HttpDelete]
 
-        public IActionResult Eliminar(int Id)
+        public IActionResult DeleteStudent(int Id)
         {
             return RedirectToAction("Index");
 
